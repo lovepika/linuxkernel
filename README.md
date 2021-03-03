@@ -160,7 +160,7 @@ qemu-system-x86_64 \
 -serial file:output.txt
 ```
 注意这里的 -kernel的路径，我参考文章那里就写错了，导致`VFS: Unable to mount root fs on unknown-block(0,0)`
->请使用普通用户执行，记得用sudo来执行。（因为路径我这里用的是${HOME},切换root用户执行会找不到文件。所以用普通用户配合sudo来执行此脚本。）
+>请使用普通用户执行，记得用sudo来执行。（因为路径我这里用的是${HOME},切换root用户执行，因为用了${HOME}变量，上面的路径肯定找不到bzImage等文件，所以用普通用户配合sudo来执行此脚本。）
 
 ## 参考：
 
