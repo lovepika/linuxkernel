@@ -149,7 +149,7 @@ gzip --best -c rootfs.ext4 > rootfs.img.gz
 
 ## 使用qemu加载内核和文件系统
 
->还是建议封装为脚本
+>还是建议封装为脚本，我这里封装为`startminiLinux.sh`
 
 ```shell
 #! /bin/bash
@@ -160,6 +160,7 @@ qemu-system-x86_64 \
 -serial file:output.txt
 ```
 注意这里的 -kernel的路径，我参考文章那里就写错了，导致`VFS: Unable to mount root fs on unknown-block(0,0)`
+>请使用普通用户执行，记得用sudo来执行。（因为路径问题我们这里用的是${HOME},切换root用户执行会找不到文件。所以用普通用户配合sudo来执行此脚本。）
 
 ## 参考：
 
