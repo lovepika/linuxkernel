@@ -1,5 +1,5 @@
 
-> 注意： 建议先切换到root用来在操作。Ubuntu下默认没有给root用户设置密码。需要先`sudo passwd root` 设置root用户的密码。然后在`su` 切换到root
+> 注意： 建议先切换到root再操作。Ubuntu下默认没有给root用户设置密码。需要先`sudo passwd root` 设置root用户的密码。然后在`su` 切换到root
 
 ## 为什么编译内核
 
